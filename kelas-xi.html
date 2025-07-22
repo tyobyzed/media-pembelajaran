@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas XI - Media Pembelajaran</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f9f9f9; }
+        h2 { color: #333; }
+        .materi, .nilai { background: white; padding: 15px; margin-top: 20px; border-radius: 10px; }
+        .materi-item { margin: 10px 0; cursor: pointer; color: blue; }
+        .button { margin: 5px; padding: 10px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+    </style>
+    <script>
+        function showDetail() {
+            document.getElementById('detail').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Kelas XI</h1>
+    
+    <div class="materi">
+        <h2>Daftar Materi</h2>
+        <div class="materi-item" onclick="showDetail()">Hukum Newton</div>
+        <div id="detail" style="display:none;">
+            <button class="button">📘 PPT</button>
+            <button class="button">🎥 Video</button>
+            <button class="button">📝 Contoh Soal</button>
+            <button class="button">📊 Latihan</button>
+        </div>
+    </div>
+
+    <div class="nilai">
+        <h2>Daftar Nilai</h2>
+        <table>
+            <thead>
+                <tr><th>Nama Siswa</th><th>Nilai</th><th>Keterangan</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Agnes Margaret Manalu</td><td>85</td><td>Tuntas</td></tr>
+                <tr><td>Aldi Prayoga</td><td>75</td><td>Tuntas</td></tr>
+                <tr><td>Alvredo Valentino Rossi Manurung</td><td>60</td><td>Belum</td></tr>
+                <tr><td>Anggi</td><td>90</td><td>Tuntas</td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
