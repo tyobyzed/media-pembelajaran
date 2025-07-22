@@ -2,16 +2,54 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Pembelajaran</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; background: #f0f0f0; }
-        .kelas { padding: 20px; margin: 10px; background: white; border-radius: 10px; cursor: pointer; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media Pembelajaran</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('assets/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+    .overlay {
+      background-color: rgba(0,0,0,0.6);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .logo {
+      width: 100px;
+      margin: 20px auto;
+    }
+    .judul {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .kelas {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+      margin: 20px auto;
+      padding: 20px;
+      width: 200px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .kelas:hover {
+      background: #00aaff;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <h1>Media Pembelajaran</h1>
+  <div class="overlay">
+    <img src="assets/logo.png" alt="Logo Sekolah" class="logo"/>
+    <div class="judul">Media Pembelajaran SMA Negeri 20 Medan</div>
     <div class="kelas" onclick="location.href='kelas-xi.html'">Kelas XI</div>
+    <div class="kelas" onclick="location.href='admin.html'">Admin</div>
+  </div>
 </body>
 </html>
