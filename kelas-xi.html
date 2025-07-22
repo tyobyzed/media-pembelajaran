@@ -1,52 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelas XI - Media Pembelajaran</title>
-    <style>
-        body { font-family: sans-serif; padding: 20px; background: #f9f9f9; }
-        h2 { color: #333; }
-        .materi, .nilai { background: white; padding: 15px; margin-top: 20px; border-radius: 10px; }
-        .materi-item { margin: 10px 0; cursor: pointer; color: blue; }
-        .button { margin: 5px; padding: 10px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid #ccc; padding: 8px; }
-    </style>
-    <script>
-        function showDetail() {
-            document.getElementById('detail').style.display = 'block';
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kelas XI - Materi</title>
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet">
 </head>
-<body>
-    <h1>Kelas XI</h1>
-    
-    <div class="materi">
-        <h2>Daftar Materi</h2>
-        <div class="materi-item" onclick="showDetail()">Hukum Newton</div>
-        <div id="detail" style="display:none;">
-            <button class="button">📘 PPT</button>
-            <button class="button">🎥 Video</button>
-            <button class="button">📝 Contoh Soal</button>
-            <button class="button">📊 Latihan</button>
-        </div>
+<body class="bg-gray-100 text-gray-800 p-4">
+
+  <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-6">
+    <h1 class="text-2xl font-bold mb-4">📚 Materi Kelas XI</h1>
+
+    <div class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">Daftar Materi</h2>
+      <ul class="space-y-3">
+        <li class="border p-3 rounded-md shadow">
+          <div class="flex justify-between items-center">
+            <span><strong>Materi:</strong> Hukum Newton</span>
+            <div class="space-x-2">
+              <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded">PPT</a>
+              <a href="#" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded">Video</a>
+              <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded">Contoh Soal</a>
+              <a href="#" class="bg-purple-500 hover:bg-purple-600 text-white px-3 py-1 rounded">Latihan</a>
+            </div>
+          </div>
+        </li>
+        <!-- Tambah materi lainnya di sini -->
+      </ul>
     </div>
 
-    <div class="nilai">
-        <h2>Daftar Nilai</h2>
-        <table>
-            <thead>
-                <tr><th>Nama Siswa</th><th>Nilai</th><th>Keterangan</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>Agnes Margaret Manalu</td><td>85</td><td>Tuntas</td></tr>
-                <tr><td>Aldi Prayoga</td><td>75</td><td>Tuntas</td></tr>
-                <tr><td>Alvredo Valentino Rossi Manurung</td><td>60</td><td>Belum</td></tr>
-                <tr><td>Anggi</td><td>90</td><td>Tuntas</td></tr>
-            </tbody>
-        </table>
+    <div class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">📊 Daftar Nilai</h2>
+      <table class="w-full table-auto border border-gray-300 text-sm">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="border px-2 py-1">No</th>
+            <th class="border px-2 py-1">Nama Siswa</th>
+            <th class="border px-2 py-1">Materi</th>
+            <th class="border px-2 py-1">Nilai</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-2 py-1 text-center">1</td>
+            <td class="border px-2 py-1">Agnes Margaret Manalu</td>
+            <td class="border px-2 py-1">Hukum Newton</td>
+            <td class="border px-2 py-1 text-center">85</td>
+          </tr>
+          <!-- Tambah nilai lainnya di sini -->
+        </tbody>
+      </table>
     </div>
+
+    <div>
+      <h2 class="text-xl font-semibold mb-2">➕ Tambah Nilai Siswa</h2>
+      <form class="space-y-2">
+        <input type="text" placeholder="Nama Siswa" class="w-full border px-3 py-2 rounded" />
+        <input type="text" placeholder="Materi" class="w-full border px-3 py-2 rounded" />
+        <input type="number" placeholder="Nilai" class="w-full border px-3 py-2 rounded" />
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Simpan</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
